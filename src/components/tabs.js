@@ -38,6 +38,8 @@ const tabsAppender = (selector) => {
 
   const tabs = Tabs(["javascript","bootstrap","technology","jquery","node.js"]);
   document.querySelector(selector).appendChild(tabs);
+
+  return tabs
 }
 
 export { Tabs, tabsAppender }

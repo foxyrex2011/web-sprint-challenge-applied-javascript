@@ -40,8 +40,6 @@ const headerAppender = (selector) => {
 
   const header = Header("The Best Title", "5/15/2022", "86 F");
   document.querySelector(selector).appendChild(header);
-
-  return header;
 }
 
 export { Header, headerAppender }
