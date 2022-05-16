@@ -19,22 +19,26 @@ const Card = (article) => {
   //
     
     const card = document.createElement("div");
-    const headline = document.createElement("div");
+    const headliner = document.createElement("div");
     const author = document.createElement("div");
     const imgContainer = document.createElement("div");
     const img = document.createElement("img");
     const span = document.createElement("span");
 
     card.classList.add("card");
-    headline.classList.add("headline");
+    headliner.classList.add("headline");
     author.classList.add("author");
     imgContainer.classList.add("img-container");
     
     imgContainer.appendChild(img);
     author.appendChild(imgContainer);
     author.appendChild(span);
-    card.appendChild(headline);
+    card.appendChild(headliner);
     card.appendChild(author);
+
+    card.addEventListener("click", e => {
+      console.log(e.headline)
+    });
 }
 
 const cardAppender = (selector) => {
@@ -47,8 +51,7 @@ const cardAppender = (selector) => {
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
 
-  const card = Card()
-  document.querySelector(selector).appendChild(card);
+  console.log(`http://localhost:5001/api/articles`);
 }
 
 export { Card, cardAppender }
