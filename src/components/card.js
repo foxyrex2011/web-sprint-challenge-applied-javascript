@@ -17,6 +17,24 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+    
+    const card = document.createElement("div");
+    const headline = document.createElement("div");
+    const author = document.createElement("div");
+    const imgContainer = document.createElement("div");
+    const img = document.createElement("img");
+    const span = document.createElement("span");
+
+    card.classList.add("card");
+    headline.classList.add("headline");
+    author.classList.add("author");
+    imgContainer.classList.add("img-container");
+    
+    imgContainer.appendChild(img);
+    author.appendChild(imgContainer);
+    author.appendChild(span);
+    card.appendChild(headline);
+    card.appendChild(author);
 }
 
 const cardAppender = (selector) => {
@@ -28,6 +46,9 @@ const cardAppender = (selector) => {
   // Create a card from each and every article object in the response, using the Card component.
   // Append each card to the element in the DOM that matches the selector passed to the function.
   //
+
+  const card = Card()
+  document.querySelector(selector).appendChild(card);
 }
 
 export { Card, cardAppender }
